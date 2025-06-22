@@ -25,8 +25,8 @@ namespace SPC.core.Entities
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation
-        public ICollection<RawMeasurement> RawMeasurement { get; set; }
+        public ICollection<RawMeasurement> RawMeasurements { get; set; }
 
-        public ICollection<UserAnalysisMethod> UserAnalysisMethods { get; set; }
+        public ICollection<UserMeasurementType> UserMeasurementTypes { get; set; }
     }
 }
