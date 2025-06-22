@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPC.core", "SPC.core\SPC.co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPC.Infrastructure", "SPC.Infrastructure\SPC.Infrastructure.csproj", "{E034AC8F-77D0-418E-8F0F-AE78ECAFC241}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPC.Api", "SPC.Api\SPC.Api.csproj", "{3AE2BF67-36CF-41BD-A116-D360A35EE8AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E034AC8F-77D0-418E-8F0F-AE78ECAFC241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E034AC8F-77D0-418E-8F0F-AE78ECAFC241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E034AC8F-77D0-418E-8F0F-AE78ECAFC241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE2BF67-36CF-41BD-A116-D360A35EE8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE2BF67-36CF-41BD-A116-D360A35EE8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE2BF67-36CF-41BD-A116-D360A35EE8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE2BF67-36CF-41BD-A116-D360A35EE8AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
