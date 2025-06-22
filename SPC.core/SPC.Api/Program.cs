@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SPC.core.Entities;
 using SPC.Infrastructure.Data;
+using SPC.Infrastructure.Data.Seeding;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +31,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetRequiredService<ApplicationDbContext>();
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 
+    var seeder = new DataSeeder(dbContext, userManager, roleManager);
+    await seeder.SeedAsync();
+}
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
