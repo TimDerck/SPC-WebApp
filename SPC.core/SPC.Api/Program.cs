@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using SPC.Api.Autentication;
+using SPC.Api.Autentication.Interface;
 using SPC.core.Entities;
 using SPC.Infrastructure.Data;
 using SPC.Infrastructure.Data.Seeding;
@@ -9,6 +11,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<ITokenService, JwtTokenService>();
 
 //database context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
