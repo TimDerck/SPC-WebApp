@@ -23,6 +23,8 @@ namespace SPC.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<UserMeasurementType>()
+                .HasKey(umt => new { umt.ApplicationUserId, umt.MeasurementTypeId });
             Seeder.Seed(builder);
 
         }
